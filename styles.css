@@ -109,17 +109,14 @@ body {
   align-items: center;
   font-size: 1.2rem;
   color: rgb(39, 39, 39);
-  cursor: pointer;
 }
 
 .size span {
   margin: 0rem 1rem;
-}
-
-.size span {
+  cursor: pointer;
   border-radius: 50%;
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2rem;
+  width: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
