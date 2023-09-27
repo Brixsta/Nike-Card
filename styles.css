@@ -56,11 +56,29 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.shoe {
+.shoe-1 {
   position: absolute;
   top: -10%;
   right: -45%;
   transform: rotate(-5deg);
+  transition: all ease-in-out 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+}
+
+.shoe-2 {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -25%;
+  right: -105%;
+  transition: all ease-in-out 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .bottom {
@@ -196,4 +214,77 @@ body {
 
 .circle-1 {
   background-color: rgb(0, 50, 212);
+}
+
+@keyframes shoe1-appear {
+  0% {
+    opacity: 0;
+    right: -100%;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    top: -10%;
+    transform: translateX(0%) rotate(-5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shoe1-vanish {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  99% {
+    transform: translateX(-220%) rotate(45deg);
+  }
+
+  100% {
+    top: -10%;
+    right: -115%;
+    transform: rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shoe2-vanish {
+  0% {
+    top: -25%;
+    right: -25%;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+
+  99% {
+    transform: translateX(-220%) rotate(5deg);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shoe2-appear {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    top: -25%;
+    right: -25%;
+    opacity: 1;
+  }
 }

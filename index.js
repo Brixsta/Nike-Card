@@ -2,7 +2,8 @@ const circle1 = document.querySelector(".circle-1");
 const circle2 = document.querySelector(".circle-2");
 const dollarBox = document.querySelector(".dollar-box");
 const topPart = document.querySelector(".top");
-const shoe = document.querySelector(".shoe");
+const shoe1 = document.querySelector(".shoe-1");
+const shoe2 = document.querySelector(".shoe-2");
 const numbers = document.querySelector(".numbers");
 const circles = numbers.children;
 
@@ -13,10 +14,8 @@ circle1.addEventListener("click", () => {
   topPart.classList.add("blue");
   dollarBox.classList.remove("red");
   topPart.classList.remove("red");
-  shoe.src = "images/shoe1.png";
-  shoe.style.transform = "rotate(-5deg)";
-  shoe.style.top = "-10%";
-  shoe.style.right = "-45%";
+  shoe1.style.animationName = "shoe1-appear";
+  shoe2.style.animationName = "shoe2-vanish";
 });
 
 circle2.addEventListener("click", () => {
@@ -26,10 +25,8 @@ circle2.addEventListener("click", () => {
   topPart.classList.add("red");
   dollarBox.classList.remove("blue");
   topPart.classList.remove("blue");
-  shoe.src = "images/shoe2.png";
-  shoe.style.transform = "rotate(-45deg)";
-  shoe.style.top = "-25%";
-  shoe.style.right = "-25%";
+  shoe1.style.animationName = "shoe1-vanish";
+  shoe2.style.animationName = "shoe2-appear";
 });
 
 // APPLY CLICK EVENT LISTENER TO CIRCLES
