@@ -6,11 +6,22 @@ const shoe1 = document.querySelector(".shoe-1");
 const shoe2 = document.querySelector(".shoe-2");
 const numbers = document.querySelector(".numbers");
 const circles = numbers.children;
+let started = false;
 
 circle1.addEventListener("click", () => {
-  applyOutlines("blue");
-  applyColors("blue");
-  applyAnimations("blue");
+  if (
+    !topPart.classList.contains("blue") &&
+    !topPart.classList.contains("red")
+  ) {
+    applyOutlines("blue");
+    applyColors("blue");
+  } else if (topPart.classList.contains("red")) {
+    applyOutlines("blue");
+    applyColors("blue");
+    applyAnimations("blue");
+  }
+
+  started = true;
 });
 
 circle2.addEventListener("click", () => {
